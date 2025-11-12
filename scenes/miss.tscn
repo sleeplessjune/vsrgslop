@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyvpn4j58b4rh"]
+
+[ext_resource type="Script" uid="uid://cj1itsckgkg4g" path="res://scripts/miss.gd" id="1_jx72w"]
+
+[node name="miss" type="Area2D"]
+script = ExtResource("1_jx72w")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

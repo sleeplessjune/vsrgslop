@@ -1,16 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3ffauqq11wvk"]
+[gd_scene load_steps=9 format=3 uid="uid://d3ffauqq11wvk"]
 
 [ext_resource type="PackedScene" uid="uid://delvq5aw3a1l5" path="res://scenes/note_receptor.tscn" id="1_p35lr"]
-[ext_resource type="Script" uid="uid://b0rfqbwp12ofu" path="res://scripts/example_scene.gd" id="1_xvif5"]
 [ext_resource type="PackedScene" uid="uid://c2dom7jsjrnxi" path="res://scenes/perfect_window_left.tscn" id="3_th6vq"]
 [ext_resource type="PackedScene" uid="uid://bnb2akbo4j6lp" path="res://scenes/perfect_window_down.tscn" id="4_woa0s"]
 [ext_resource type="PackedScene" uid="uid://bxjhy02us1d61" path="res://scenes/perfect_window_up.tscn" id="5_0vo67"]
 [ext_resource type="PackedScene" uid="uid://c34gqf4wn22m7" path="res://scenes/perfect_window_right.tscn" id="6_2dpgr"]
+[ext_resource type="PackedScene" uid="uid://cyvpn4j58b4rh" path="res://scenes/miss.tscn" id="6_woa0s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_th6vq"]
+size = Vector2(20, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vo67"]
+size = Vector2(505, 20)
 
 [node name="example scene" type="Node2D"]
-script = ExtResource("1_xvif5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -40)
@@ -58,3 +61,9 @@ shape = SubResource("RectangleShape2D_th6vq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="perfect_window_right"]
 position = Vector2(57, 40)
 shape = SubResource("RectangleShape2D_th6vq")
+
+[node name="miss" parent="." instance=ExtResource("6_woa0s")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="miss"]
+position = Vector2(0.5, 176)
+shape = SubResource("RectangleShape2D_0vo67")

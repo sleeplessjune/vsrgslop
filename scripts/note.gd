@@ -1,7 +1,8 @@
 extends Sprite2D
 
+#basic note scroll function by Luera: https://www.youtube.com/watch?v=bXOTSNvchWI
+
 @export var key_name: String = ""
-@onready var cleartimer: Timer = $cleartimer
 @onready var notecollision: CollisionShape2D = $RigidBody2D/notecollision
 
 
@@ -20,14 +21,8 @@ func _process(delta):
 	notecollision.global_position = global_position
 	
 
-func Setup(target_x: float, target_frame: int):
+func Setup(target_x: float):
 	global_position = Vector2(target_x, init_y_pos)
-	frame = target_frame
 	
 	
 	set_process(true)
-
-
-
-func _on_cleartimer_timeout():
-	queue_free()
