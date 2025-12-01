@@ -1,8 +1,10 @@
 extends Area2D
 
+
 @export var key_name: String = ""
 var great = 50
 var add_combo = 1
+var great_judgement = "Great!"
 
 #checking for if notecollision is in perfect_window
 func _ready() -> void:
@@ -17,5 +19,6 @@ func _process(delta: float) -> void:
 			print("great.")
 			Global.current_score += great
 			Global.combo += add_combo
+			Global.recent_judgement = great_judgement
 			var myparent = overlapping_bodies[0].get_parent()
 			myparent.queue_free()

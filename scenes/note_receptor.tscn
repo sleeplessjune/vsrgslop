@@ -33,6 +33,6 @@ animations = [{
 
 [node name="note_receptor" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_jykvp")
-animation = &"pressed"
+animation = &"not_pressed"
 autoplay = "not_pressed"
 script = ExtResource("2_jykvp")

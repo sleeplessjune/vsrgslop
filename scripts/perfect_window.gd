@@ -4,7 +4,7 @@ extends Area2D
 @export var key_name: String = ""
 var perfect = 100
 var add_combo = 1
-
+var perfect_judgement = "Perfect!"
 
 #checking for if notecollision is in perfect_window
 func _ready() -> void:
@@ -20,4 +20,5 @@ func _process(delta: float) -> void:
 			myparent.queue_free()
 			Global.current_score += perfect
 			Global.combo += add_combo
+			Global.recent_judgement = perfect_judgement
 			print("perfect!")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3ffauqq11wvk"]
+[gd_scene load_steps=17 format=3 uid="uid://d3ffauqq11wvk"]
 
 [ext_resource type="Script" uid="uid://i65hmvvhjbm" path="res://scripts/currentscore.gd" id="1_mcfkp"]
 [ext_resource type="PackedScene" uid="uid://delvq5aw3a1l5" path="res://scenes/note_receptor.tscn" id="1_p35lr"]
+[ext_resource type="Script" uid="uid://6lbg6wihdnx7" path="res://scripts/judgement.gd" id="1_wk7q2"]
 [ext_resource type="Script" uid="uid://bh10ait010um8" path="res://scripts/combo.gd" id="2_cyyxy"]
 [ext_resource type="PackedScene" uid="uid://c2dom7jsjrnxi" path="res://scenes/perfect_window_left.tscn" id="3_th6vq"]
 [ext_resource type="PackedScene" uid="uid://bnb2akbo4j6lp" path="res://scenes/perfect_window_down.tscn" id="4_woa0s"]
@@ -26,6 +27,14 @@ size = Vector2(20, 26)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+[node name="judgement" type="RichTextLabel" parent="StaticBody2D"]
+offset_left = -106.0
+offset_top = -12.0
+offset_right = 353.0
+offset_bottom = 38.0
+horizontal_alignment = 1
+script = ExtResource("1_wk7q2")
+
 [node name="currentscore" type="RichTextLabel" parent="StaticBody2D"]
 offset_left = -220.0
 offset_top = -163.0
@@ -35,9 +44,9 @@ text = "Score:"
 script = ExtResource("1_mcfkp")
 
 [node name="combotext" type="RichTextLabel" parent="StaticBody2D"]
-offset_left = 96.0
+offset_left = 95.0
 offset_top = -87.0
-offset_right = 322.0
+offset_right = 321.0
 offset_bottom = -47.0
 text = "Combo"
 
@@ -48,6 +57,14 @@ offset_right = 152.0
 offset_bottom = -23.0
 horizontal_alignment = 1
 script = ExtResource("2_cyyxy")
+
+[node name="songinfo" type="RichTextLabel" parent="StaticBody2D"]
+offset_left = -227.0
+offset_top = 60.0
+offset_right = 89.0
+offset_bottom = 83.0
+text = "Ref:rain (for 7th Heaven) - kamome sano"
+fit_content = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -40)

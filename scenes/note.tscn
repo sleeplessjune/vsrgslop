@@ -1,18 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cit33mldxll6s"]
 
-[ext_resource type="Texture2D" uid="uid://bxqyvkugedsp2" path="res://assets/sprites/notesheet.png" id="1_1bnk6"]
+[ext_resource type="Texture2D" uid="uid://buwxfw8x8hpy1" path="res://assets/sprites/note_left.png" id="1_1bnk6"]
 [ext_resource type="Script" uid="uid://brgge0cxybe3b" path="res://scripts/note.gd" id="5_8ibmt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bnk6"]
 
 [node name="note" type="Sprite2D"]
 texture = ExtResource("1_1bnk6")
-hframes = 4
 script = ExtResource("5_8ibmt")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="notecollision" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(0, -2.38419e-07)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.001, 0.001)
 shape = SubResource("RectangleShape2D_1bnk6")
