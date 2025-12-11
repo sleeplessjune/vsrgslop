@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3ffauqq11wvk"]
+[gd_scene load_steps=21 format=3 uid="uid://d3ffauqq11wvk"]
 
 [ext_resource type="Script" uid="uid://i65hmvvhjbm" path="res://scripts/currentscore.gd" id="1_mcfkp"]
 [ext_resource type="PackedScene" uid="uid://delvq5aw3a1l5" path="res://scenes/note_receptor.tscn" id="1_p35lr"]
@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://dhgxmaetlsv5q" path="res://scenes/great_window_down.tscn" id="8_mcfkp"]
 [ext_resource type="PackedScene" uid="uid://v7ymrkkrnmph" path="res://scenes/great_window_up.tscn" id="9_cyyxy"]
 [ext_resource type="PackedScene" uid="uid://bxkmhie7k3r0j" path="res://scenes/great_window_right.tscn" id="10_wk7q2"]
-[ext_resource type="VideoStream" uid="uid://3hud7qh70rw5" path="res://assets/video/Ref_rain (for 7th Heaven) - カモメサノエレクトリックオーケストラ include Limonène [maimai でらっくす].ogv" id="15_5e4si"]
+[ext_resource type="VideoStream" uid="uid://koquygascd3n" path="res://assets/video/【BOFNT】Overjoy ★ OVERDOSE!! - vally.exe (1080p, h264).mp4" id="15_5e4si"]
 [ext_resource type="Script" uid="uid://csigq1cblraak" path="res://scripts/mvplayer.gd" id="16_ll6cl"]
+[ext_resource type="PackedScene" uid="uid://6dv8eepmlqp1" path="res://scenes/chart.tscn" id="17_7oqaw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_th6vq"]
 size = Vector2(20, 26)
@@ -193,9 +194,9 @@ shape = SubResource("RectangleShape2D_4645j")
 z_index = -10
 offset_left = -231.0
 offset_top = -170.0
-offset_right = 409.0
-offset_bottom = 190.0
-scale = Vector2(0.72, 0.72)
+offset_right = 1689.0
+offset_bottom = 910.0
+scale = Vector2(0.24, 0.24)
 stream = ExtResource("15_5e4si")
 script = ExtResource("16_ll6cl")
 
@@ -231,5 +232,7 @@ offset_top = -224.0
 offset_right = 323.0
 offset_bottom = 131.0
 color = Color(0, 0, 0, 1)
+
+[node name="chart" parent="." instance=ExtResource("17_7oqaw")]
 
 [connection signal="timeout" from="mvplayer/songstartdelay" to="mvplayer" method="_on_songstartdelay_timeout"]

@@ -22,7 +22,13 @@ Global="*res://scripts/global.gd"
 
 [display]
 
+window/size/mode=3
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
+
+[dotnet]
+
+project/assembly_name="VSRGslop"
 
 [input]
 
