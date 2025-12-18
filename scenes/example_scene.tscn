@@ -76,12 +76,14 @@ fit_content = true
 z_index = 2
 position = Vector2(143, 52)
 rotation = 1.5708
+lane_index = 2
 key_name = "key_j"
 
 [node name="note_receptor_down" parent="." instance=ExtResource("1_p35lr")]
 z_index = 2
 position = Vector2(105, 52)
 rotation = 4.71239
+lane_index = 1
 key_name = "key_f"
 
 [node name="note_receptor_left" parent="." instance=ExtResource("1_p35lr")]
@@ -93,6 +95,7 @@ key_name = "key_d"
 z_index = 2
 position = Vector2(181, 52)
 rotation = 3.14159
+lane_index = 3
 key_name = "key_k"
 
 [node name="perfect_window_left" parent="." instance=ExtResource("3_th6vq")]
@@ -236,4 +239,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="chart" parent="." instance=ExtResource("17_7oqaw")]
 
+[connection signal="finished" from="mvplayer" to="StaticBody2D/judgement" method="_on_mvplayer_finished"]
+[connection signal="finished" from="mvplayer" to="chart" method="_on_mvplayer_finished"]
 [connection signal="timeout" from="mvplayer/songstartdelay" to="mvplayer" method="_on_songstartdelay_timeout"]
