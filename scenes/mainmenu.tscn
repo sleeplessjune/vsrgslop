@@ -34,3 +34,29 @@ script = ExtResource("1_5mbse")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(608, 305)
 zoom = Vector2(0.8, 0.8)
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 30.0
+offset_top = -2.0
+offset_right = 201.0
+offset_bottom = 22.0
+scale = Vector2(6.7, 6.7)
+text = "VSRGslop (real)"
+horizontal_alignment = 1
+
+[node name="broken" type="RichTextLabel" parent="."]
+offset_left = 818.0
+offset_top = 379.0
+offset_right = 1387.0
+offset_bottom = 637.0
+scale = Vector2(4, 4)
+text = "<- does nothing"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -6.0
+offset_top = 288.0
+offset_right = 78.0
+offset_bottom = 342.0
+scale = Vector2(4, 4)
+text = "controls:
+d/f/j/k"

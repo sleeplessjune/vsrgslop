@@ -55,3 +55,4 @@ func SpawnNote(button_name: String, delay: float):
 func _on_mvplayer_finished():
 	print(note_output_arr)
 	mvplayer.queue_free()
+	get_tree().change_scene_to_file("res://scenes/results_screen.tscn")

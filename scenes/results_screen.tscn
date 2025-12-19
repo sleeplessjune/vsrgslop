@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqdj4ecstuy6h"]
+
+[ext_resource type="Script" uid="uid://b8q2srkrqktj7" path="res://scripts/endscore.gd" id="1_fqf1x"]
+[ext_resource type="Script" uid="uid://dndroalg4543o" path="res://scripts/return.gd" id="2_j5vbe"]
+
+[node name="results screen" type="Node2D"]
+
+[node name="wow" type="RichTextLabel" parent="."]
+offset_left = -737.0
+offset_top = -189.0
+offset_right = -588.0
+offset_bottom = -149.0
+scale = Vector2(10, 10)
+text = "u did song wow"
+horizontal_alignment = 1
+
+[node name="endscore" type="RichTextLabel" parent="."]
+offset_left = -4127.0
+offset_top = 70.0
+offset_right = -3095.0
+offset_bottom = 365.0
+scale = Vector2(8, 8)
+text = "sdf
+"
+tab_size = 10
+horizontal_alignment = 1
+script = ExtResource("1_fqf1x")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
+
+[node name="return" type="Button" parent="."]
+offset_left = -170.0
+offset_top = -359.0
+offset_right = -112.0
+offset_bottom = -328.0
+scale = Vector2(6, 6)
+text = "return"
+script = ExtResource("2_j5vbe")
